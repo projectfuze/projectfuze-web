@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Users } from 'lucide-react';
+import Image from 'next/image';
 import { Section } from '@/components/ui/Section';
 import { Button } from '@/components/ui/Button';
 
@@ -36,12 +36,13 @@ export function AboutPreview() {
         </div>
         <div className="order-1 md:order-2 relative px-4 md:px-0">
           <div className="aspect-[4/5] rounded-2xl bg-gray-200 overflow-hidden relative shadow-2xl transform rotate-2 hover:rotate-0 transition-transform duration-500">
-            {/* Placeholder for David's Headshot */}
-            <div className="absolute inset-0 flex flex-col items-center justify-center bg-gray-800 text-white p-8 text-center">
-              <Users size={64} className="mb-4 text-[#D4A84B]" />
-              <span className="text-lg font-bold">[David&apos;s Headshot]</span>
-              <span className="text-sm text-gray-400 mt-2">Professional portrait</span>
-            </div>
+            <Image
+              src="/headshot-david.png"
+              alt="David Fuesser"
+              fill
+              className="object-cover object-top"
+              priority
+            />
           </div>
           {/* Decorative Elements */}
           <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-[#D4A84B] rounded-full z-[-1] opacity-20 blur-2xl"></div>
