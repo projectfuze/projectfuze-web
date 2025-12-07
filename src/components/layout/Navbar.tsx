@@ -19,7 +19,10 @@ export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
-  const isHome = pathname === '/';
+
+  // Pages with dark hero sections where navbar should start with light text
+  const darkHeroPages = ['/', '/about', '/co-conspirator'];
+  const hasDarkHero = darkHeroPages.includes(pathname);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,7 +38,7 @@ export function Navbar() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="flex-shrink-0 flex items-center cursor-pointer group">
-            <span className={`text-2xl font-bold tracking-tight transition-colors ${scrolled || !isHome ? 'text-[#3D3D3D]' : 'text-white'}`}>PROJECT</span>
+            <span className={`text-2xl font-bold tracking-tight transition-colors ${scrolled || !hasDarkHero ? 'text-[#3D3D3D]' : 'text-white'}`}>PROJECT</span>
             <span className="text-2xl font-light text-[#D4A84B] ml-1 group-hover:text-[#c4983b] transition-colors">FUZE</span>
           </Link>
 
@@ -45,7 +48,7 @@ export function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`flex items-center gap-1 font-medium text-sm uppercase tracking-wide transition-colors hover:text-[#D4A84B] ${scrolled || !isHome ? 'text-gray-600' : 'text-gray-200'}`}
+                className={`flex items-center gap-1 font-medium text-sm uppercase tracking-wide transition-colors hover:text-[#D4A84B] ${scrolled || !hasDarkHero ? 'text-gray-600' : 'text-gray-200'}`}
               >
                 {link.icon}
                 {link.name}
@@ -60,7 +63,7 @@ export function Navbar() {
           <div className="lg:hidden">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className={`${scrolled || !isHome ? 'text-[#3D3D3D]' : 'text-white'} hover:text-[#D4A84B]`}
+              className={`${scrolled || !hasDarkHero ? 'text-[#3D3D3D]' : 'text-white'} hover:text-[#D4A84B]`}
             >
               {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
