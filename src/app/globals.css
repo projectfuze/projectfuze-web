@@ -1,22 +1,24 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Project Fuze Brand Colors */
+  --color-charcoal: #3D3D3D;
+  --color-gold: #D4A84B;
+  --color-gray-light: #F5F5F5;
+  --color-white: #FFFFFF;
+
+  --background: var(--color-gray-light);
+  --foreground: var(--color-charcoal);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary: var(--color-gold);
+  --color-charcoal: #3D3D3D;
+  --color-gold: #D4A84B;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
