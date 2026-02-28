@@ -11,8 +11,8 @@ const plusJakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Project Fuze - Launchpad for Extraordinary Progress",
-  description: "Your launchpad for extraordinary progress in digital products & company-building. Advisory, workshops, and audits to propel your journey.",
+  title: "Project Fuze — Fractional Product Operator",
+  description: "Your product org has a structural problem. I embed in your company, find it, and build the operating system to fix it. For Series A/B SaaS founders scaling from founder-led to product-led.",
 };
 
 export default function RootLayout({
@@ -22,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${plusJakarta.variable} font-sans antialiased text-[#3D3D3D] bg-[#F5F5F5] min-h-screen flex flex-col selection:bg-[#D4A84B] selection:text-white`}>
+      <body className={`${plusJakarta.variable} font-sans antialiased text-[#3D3D3D] bg-white min-h-screen flex flex-col selection:bg-[#D4A84B] selection:text-white`}>
         <Navbar />
         <main className="flex-grow">
           {children}

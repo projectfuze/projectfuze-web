@@ -3,26 +3,24 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu, X, Zap, Magnet } from 'lucide-react';
+import { Menu, X, Rocket } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 
+const CALENDLY_URL = 'https://calendly.com/davidfuesser/30min';
+
 const navLinks = [
-  { name: 'About', href: '/about' },
-  { name: '1:1 Co-Conspirator', href: '/co-conspirator' },
-  { name: 'INFUZED', href: '/infuzed', icon: <Zap size={14} className="text-[#D4A84B] fill-current" /> },
-  { name: 'Workshops', href: '/workshops' },
-  { name: 'Audit', href: '/audit', icon: <Magnet size={14} className="text-red-500" /> },
-  { name: 'Blog', href: '/blog' },
+  { name: 'Newsletter', href: '/infuzed' },
 ];
+
+const darkHeroPages = ['/infuzed'];
 
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
 
-  // Pages with dark hero sections where navbar should start with light text
-  const darkHeroPages = ['/', '/about', '/co-conspirator'];
   const hasDarkHero = darkHeroPages.includes(pathname);
+  const showLightText = hasDarkHero && !scrolled;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -33,65 +31,63 @@ export function Navbar() {
   }, []);
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/95 backdrop-blur-md shadow-sm py-2' : 'bg-transparent py-4'}`}>
+    <nav className={`fixed w-full z-50 transition-all duration-200 border-b ${scrolled ? 'bg-white/95 backdrop-blur-sm border-gray-200 py-3' : 'bg-transparent border-transparent py-5'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <Link href="/" className="flex-shrink-0 flex items-center cursor-pointer group">
-            <span className={`text-2xl font-bold tracking-tight transition-colors ${scrolled || !hasDarkHero ? 'text-[#3D3D3D]' : 'text-white'}`}>PROJECT</span>
-            <span className="text-2xl font-light text-[#D4A84B] ml-1 group-hover:text-[#c4983b] transition-colors">FUZE</span>
+        <div className="flex justify-between items-center">
+          <Link href="/" className="text-xl font-bold tracking-tighter cursor-pointer flex items-center gap-2 group">
+            <div className={`flex items-center justify-center w-8 h-8 rounded-md transition-colors ${showLightText ? 'bg-white text-[#3D3D3D]' : 'bg-[#3D3D3D] text-white'}`}>
+              <Rocket size={16} className="group-hover:-translate-y-0.5 transition-transform" />
+            </div>
+            <span className={`transition-colors ${showLightText ? 'text-white' : 'text-[#3D3D3D]'}`}>PROJECT<span className="font-light text-[#D4A84B]">FUZE</span></span>
           </Link>
 
-          {/* Desktop Nav */}
-          <div className="hidden lg:flex space-x-8 items-center">
+          <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`flex items-center gap-1 font-medium text-sm uppercase tracking-wide transition-colors hover:text-[#D4A84B] ${scrolled || !hasDarkHero ? 'text-gray-600' : 'text-gray-200'}`}
+                className={`text-sm font-medium transition-colors ${
+                  pathname === link.href
+                    ? (showLightText ? 'text-white font-bold' : 'text-[#3D3D3D] font-bold')
+                    : (showLightText ? 'text-gray-300 hover:text-white' : 'text-gray-500 hover:text-[#3D3D3D]')
+                }`}
               >
-                {link.icon}
                 {link.name}
               </Link>
             ))}
-            <Link href="/co-conspirator">
-              <Button variant="primary" className="px-5 py-2 text-sm">Get Started</Button>
-            </Link>
+            <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
+              <Button variant={showLightText ? 'primary' : 'dark'} className="ml-2 px-4 py-2 text-sm">
+                Book a Call
+              </Button>
+            </a>
           </div>
 
-          {/* Mobile Menu Button */}
-          <div className="lg:hidden">
-            <button
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className={`${scrolled || !hasDarkHero ? 'text-[#3D3D3D]' : 'text-white'} hover:text-[#D4A84B]`}
-            >
-              {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
-            </button>
-          </div>
+          <button
+            className={`md:hidden transition-colors ${showLightText ? 'text-white' : 'text-[#3D3D3D]'}`}
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          >
+            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
         </div>
       </div>
 
-      {/* Mobile Nav Dropdown */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-white border-t border-gray-100 absolute w-full shadow-xl animate-in slide-in-from-top-5">
-          <div className="px-4 pt-4 pb-6 space-y-2">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={() => setMobileMenuOpen(false)}
-                className="flex items-center gap-3 w-full text-left px-4 py-3 text-base font-bold text-gray-700 hover:text-[#D4A84B] hover:bg-gray-50 rounded-lg transition-colors"
-              >
-                {link.icon}
-                {link.name}
-              </Link>
-            ))}
-            <div className="mt-6 px-4">
-              <Link href="/co-conspirator" onClick={() => setMobileMenuOpen(false)}>
-                <Button variant="primary" className="w-full">Get Started</Button>
-              </Link>
-            </div>
-          </div>
+        <div className="md:hidden absolute top-full left-0 w-full bg-white shadow-lg py-4 px-6 flex flex-col gap-2 border-b border-gray-200">
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              onClick={() => setMobileMenuOpen(false)}
+              className="text-left py-3 font-medium text-gray-600 hover:text-[#3D3D3D] border-b border-gray-50 last:border-0"
+            >
+              {link.name}
+            </Link>
+          ))}
+          <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)} className="mt-4">
+            <Button variant="dark" className="w-full">
+              Book a Call
+            </Button>
+          </a>
         </div>
       )}
     </nav>

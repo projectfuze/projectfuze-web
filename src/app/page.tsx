@@ -1,13 +1,25 @@
-import { Hero, Framework, ServicePaths, AboutPreview, Newsletter } from '@/components/home';
+import {
+  Hero,
+  Problem,
+  Proof,
+  WhoIAm,
+  HowIWork,
+  Engagements,
+  FitCheck,
+  FinalCTA
+} from '@/components/home';
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <Framework />
-      <ServicePaths />
-      <AboutPreview />
-      <Newsletter />
+      <Problem />
+      <Proof />
+      <WhoIAm />
+      <HowIWork />
+      <Engagements />
+      <FitCheck />
+      <FinalCTA />
     </>
   );
 }

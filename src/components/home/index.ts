@@ -1,5 +1,8 @@
 export { Hero } from './Hero';
-export { Framework } from './Framework';
-export { ServicePaths } from './ServicePaths';
-export { AboutPreview } from './AboutPreview';
-export { Newsletter } from './Newsletter';
+export { Problem } from './Problem';
+export { Proof } from './Proof';
+export { WhoIAm } from './WhoIAm';
+export { HowIWork } from './HowIWork';
+export { Engagements } from './Engagements';
+export { FitCheck } from './FitCheck';
+export { FinalCTA } from './FinalCTA';
