@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-const CALENDLY_URL = 'https://calendly.com/davidfuesser/30min';
+const CAL_URL = 'https://cal.com/davidfuesser/ai-readiness-call';
 
 export function Hero() {
   return (
@@ -17,22 +17,14 @@ export function Hero() {
             <p className="text-lg md:text-xl text-gray-500 max-w-2xl leading-relaxed mb-10">
               Project Fuze is a product architect and an engineering leader — one on each side of the system. We install the backbone that connects Product, Design, and Engineering into a single AI-native workflow. We build it, hand it off, and the system stays.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <a
-                href={CALENDLY_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-6 py-3 rounded-md font-semibold transition-all duration-200 text-sm tracking-wide bg-[#3D3D3D] text-white hover:bg-black shadow-sm"
-              >
-                Book a Call
-              </a>
-              <a
-                href="mailto:david@projectfuze.co"
-                className="inline-flex items-center justify-center px-6 py-3 rounded-md font-semibold transition-all duration-200 text-sm tracking-wide bg-transparent border border-gray-300 text-gray-600 hover:border-[#3D3D3D] hover:text-[#3D3D3D]"
-              >
-                david@projectfuze.co
-              </a>
-            </div>
+            <a
+              href={CAL_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center px-6 py-3 rounded-md font-semibold transition-all duration-200 text-sm tracking-wide bg-[#3D3D3D] text-white hover:bg-black shadow-sm"
+            >
+              Check Your AI Readiness
+            </a>
           </div>
 
           <div className="hidden md:block">

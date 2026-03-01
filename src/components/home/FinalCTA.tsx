@@ -1,4 +1,4 @@
-const CALENDLY_URL = 'https://calendly.com/davidfuesser/30min';
+const CAL_URL = 'https://cal.com/davidfuesser/ai-readiness-call';
 
 export function FinalCTA() {
   return (
@@ -11,12 +11,12 @@ export function FinalCTA() {
           30-minute call. We&apos;ll ask how your product org makes decisions and how your team works with AI today. You&apos;ll leave knowing whether your org is ready to go AI-native — or what&apos;s blocking it.
         </p>
         <a
-          href={CALENDLY_URL}
+          href={CAL_URL}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center justify-center px-8 py-4 rounded-md font-semibold transition-all duration-200 text-base tracking-wide bg-[#D4A84B] text-white hover:bg-[#b8903b] shadow-sm"
         >
-          Book a Call
+          Check Your AI Readiness
         </a>
       </div>
     </section>

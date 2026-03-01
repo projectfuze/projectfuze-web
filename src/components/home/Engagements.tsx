@@ -1,7 +1,7 @@
 import { Compass, Cable, Zap, GraduationCap, ShieldCheck, GitBranch, ArrowRightCircle, Search } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 
-const CALENDLY_URL = 'https://calendly.com/davidfuesser/30min';
+const CAL_URL = 'https://cal.com/davidfuesser/ai-readiness-call';
 
 interface Deliverable {
   icon: LucideIcon;
@@ -115,17 +115,17 @@ export function Engagements() {
 
         <div className="text-center mt-10">
           <a
-            href={CALENDLY_URL}
+            href={CAL_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center px-8 py-3 rounded-md font-semibold transition-all duration-200 text-sm tracking-wide bg-[#3D3D3D] text-white hover:bg-black shadow-sm"
           >
-            Book a Call
+            Check Your AI Readiness
           </a>
           <p className="mt-6 text-sm text-gray-400">
             Not sure yet? Start with the Scan.{' '}
             <a
-              href={CALENDLY_URL}
+              href={CAL_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="text-[#D4A84B] hover:underline"

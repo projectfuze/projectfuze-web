@@ -6,7 +6,7 @@ import { usePathname } from 'next/navigation';
 import { Menu, X, Rocket } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 
-const CALENDLY_URL = 'https://calendly.com/davidfuesser/30min';
+const CAL_URL = 'https://cal.com/davidfuesser/ai-readiness-call';
 
 const navLinks = [
   { name: 'Newsletter', href: '/infuzed' },
@@ -55,9 +55,9 @@ export function Navbar() {
                 {link.name}
               </Link>
             ))}
-            <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
+            <a href={CAL_URL} target="_blank" rel="noopener noreferrer">
               <Button variant={showLightText ? 'primary' : 'dark'} className="ml-2 px-4 py-2 text-sm">
-                Book a Call
+                Check Your AI Readiness
               </Button>
             </a>
           </div>
@@ -83,9 +83,9 @@ export function Navbar() {
               {link.name}
             </Link>
           ))}
-          <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)} className="mt-4">
+          <a href={CAL_URL} target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)} className="mt-4">
             <Button variant="dark" className="w-full">
-              Book a Call
+              Check Your AI Readiness
             </Button>
           </a>
         </div>

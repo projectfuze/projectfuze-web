@@ -18,7 +18,7 @@ export function Footer() {
           </div>
 
           <div className="flex items-center gap-6 text-sm text-gray-500">
-            <a href="mailto:david@projectfuze.co" className="hover:text-[#3D3D3D]">david@projectfuze.co</a>
+            <a href="mailto:david@projectfuze.com" className="hover:text-[#3D3D3D]">david@projectfuze.com</a>
             <Link href="/impressum" className="hover:text-[#3D3D3D]">Legal</Link>
             <Link href="/privacy" className="hover:text-[#3D3D3D]">Privacy</Link>
           </div>
