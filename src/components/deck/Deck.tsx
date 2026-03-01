@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 import { SlideTitle } from './SlideTitle';
 import { SlideProblem } from './SlideProblem';
 import { SlideShift } from './SlideShift';
+import { SlideTimeSavings } from './SlideTimeSavings';
 import { SlideSystem } from './SlideSystem';
 import { SlideDuo } from './SlideDuo';
 import { SlideHowWeWork } from './SlideHowWeWork';
@@ -15,6 +16,7 @@ const slides = [
   SlideTitle,
   SlideProblem,
   SlideShift,
+  SlideTimeSavings,
   SlideSystem,
   SlideDuo,
   SlideHowWeWork,
