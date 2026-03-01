@@ -1,9 +1,7 @@
-import { Button } from '@/components/ui/Button';
+'use client';
 
-export const metadata = {
-  title: 'INFUZED Newsletter — Project Fuze',
-  description: 'Weekly insights on product org dysfunction, scaling challenges, and what actually works. For Series A/B SaaS founders.',
-};
+import { useState } from 'react';
+import { Button } from '@/components/ui/Button';
 
 const topics = [
   'Why your VP of Product hire isn\'t working (and what to do about it)',
@@ -14,6 +12,31 @@ const topics = [
 ];
 
 export default function InfuzedPage() {
+  const [email, setEmail] = useState('');
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    setStatus('loading');
+
+    try {
+      const res = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
+      });
+
+      if (res.ok) {
+        setStatus('success');
+        setEmail('');
+      } else {
+        setStatus('error');
+      }
+    } catch {
+      setStatus('error');
+    }
+  }
+
   return (
     <>
       <div className="bg-[#3D3D3D] text-white pt-32 pb-20 px-4">
@@ -30,15 +53,29 @@ export default function InfuzedPage() {
           </p>
 
           <div className="max-w-md mx-auto">
-            <div className="flex gap-3">
-              <input
-                type="email"
-                placeholder="your@email.com"
-                className="flex-1 px-4 py-3 border border-gray-600 bg-white/10 rounded-lg text-sm text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#D4A84B] focus:border-transparent"
-              />
-              <Button variant="primary">Subscribe</Button>
-            </div>
-            <p className="text-xs text-gray-500 mt-3">No spam. Unsubscribe anytime.</p>
+            {status === 'success' ? (
+              <p className="text-[#D4A84B] font-medium py-3">You&apos;re in. Check your inbox.</p>
+            ) : (
+              <form onSubmit={handleSubmit} className="flex gap-3">
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="your@email.com"
+                  required
+                  className="flex-1 px-4 py-3 border border-gray-600 bg-white/10 rounded-lg text-sm text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#D4A84B] focus:border-transparent"
+                />
+                <Button variant="primary" disabled={status === 'loading'}>
+                  {status === 'loading' ? 'Subscribing...' : 'Subscribe'}
+                </Button>
+              </form>
+            )}
+            {status === 'error' && (
+              <p className="text-red-400 text-sm mt-3">Something went wrong. Try again.</p>
+            )}
+            {status !== 'success' && (
+              <p className="text-xs text-gray-500 mt-3">No spam. Unsubscribe anytime.</p>
+            )}
           </div>
         </div>
       </div>
