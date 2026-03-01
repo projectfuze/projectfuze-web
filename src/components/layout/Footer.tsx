@@ -14,7 +14,7 @@ export function Footer() {
               <span className="text-[#3D3D3D]">PROJECT<span className="font-light text-[#D4A84B]">FUZE</span></span>
             </div>
             <span className="hidden md:inline text-gray-300">|</span>
-            <span className="text-sm text-gray-500">Fractional Product Operator</span>
+            <span className="text-sm text-gray-500">Upgrade Your Team to AI-Native</span>
           </div>
 
           <div className="flex items-center gap-6 text-sm text-gray-500">

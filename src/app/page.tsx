@@ -1,8 +1,7 @@
 import {
   Hero,
-  Problem,
-  Proof,
-  WhoIAm,
+  Shift,
+  System,
   HowIWork,
   Engagements,
   FitCheck,
@@ -13,9 +12,8 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <Problem />
-      <Proof />
-      <WhoIAm />
+      <Shift />
+      <System />
       <HowIWork />
       <Engagements />
       <FitCheck />

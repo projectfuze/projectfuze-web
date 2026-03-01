@@ -26,3 +26,18 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@keyframes flow-pulse {
+  0%, 100% { opacity: 0.15; }
+  50% { opacity: 0.8; }
+}
+
+@keyframes glow-breathe {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.08); }
+}
+
+@keyframes dot-glow {
+  0%, 100% { opacity: 0.1; box-shadow: 0 0 2px rgba(212, 168, 75, 0.2); }
+  50% { opacity: 0.9; box-shadow: 0 0 8px rgba(212, 168, 75, 0.6); }
+}
