@@ -25,6 +25,10 @@ export function Hero() {
             >
               Check Your AI Readiness
             </a>
+            <p className="mt-4 text-xs font-mono text-gray-400 tracking-wide">
+              <span className="inline-block w-1.5 h-1.5 rounded-full bg-green-500 mr-2 align-middle" />
+              Accepting 2 new engagements in {new Date().toLocaleString('en-US', { month: 'long' })}
+            </p>
           </div>
 
           <div className="hidden md:block">
