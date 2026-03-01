@@ -11,8 +11,8 @@ const plusJakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Project Fuze — Fractional Product Operator",
-  description: "Your product org has a structural problem. I embed in your company, find it, and build the operating system to fix it. For Series A/B SaaS founders scaling from founder-led to product-led.",
+  title: "Project Fuze — Upgrade Your Team to AI-Native",
+  description: "We install the backbone that connects Product, Design, and Engineering into a single AI-native workflow. We build it, hand it off, and the system stays.",
 };
 
 export default function RootLayout({

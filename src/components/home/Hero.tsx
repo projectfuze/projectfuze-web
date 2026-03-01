@@ -9,13 +9,13 @@ export function Hero() {
         <div className="grid md:grid-cols-[1fr_auto] gap-12 items-center">
           <div>
             <p className="text-sm font-mono text-[#D4A84B] tracking-wider uppercase mb-6">
-              Fractional Product Operator
+              Upgrade Your Team to AI-Native
             </p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#3D3D3D] leading-[1.1] tracking-tight mb-6">
-              Your product org has a structural problem. I find it.
+              Your team has AI tools. They don&apos;t have an AI-native workflow.
             </h1>
             <p className="text-lg md:text-xl text-gray-500 max-w-2xl leading-relaxed mb-10">
-              I embed in Series A/B SaaS companies, diagnose why smart teams produce mediocre outcomes, and build the operating system that fixes it. Not slides. Systems.
+              Project Fuze is a product architect and an engineering leader — one on each side of the system. We install the backbone that connects Product, Design, and Engineering into a single AI-native workflow. We build it, hand it off, and the system stays.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a
