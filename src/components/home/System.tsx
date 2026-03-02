@@ -256,7 +256,7 @@ export function System() {
                 </h3>
               </div>
               <p className="text-sm text-zinc-400 leading-relaxed">
-                10 years inside product orgs. 30+ SaaS products. Knows where decisions get lost and how to make them flow. Designs the decision frameworks and priority structures that make your product intent actionable — not just for humans in meetings, but for agents in workflows.
+                Product lead in three high-growth startups. Founded a product consulting firm that worked with Mercedes-Benz, Quora, and 30+ other orgs. Knows where decisions get lost and how to make them flow. Designs the decision frameworks and priority structures that make your product intent actionable — not just for humans in meetings, but for agents in workflows.
               </p>
             </div>
             <div>
