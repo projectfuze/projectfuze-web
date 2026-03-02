@@ -14,7 +14,7 @@ const people = [
   {
     name: 'Lucas',
     role: 'Engineering Lead',
-    photo: null,
+    photo: '/headshot-lucas.png',
     bullets: [
       'Senior engineering leader',
       'Builds the quality layer: automated checks, safety nets',

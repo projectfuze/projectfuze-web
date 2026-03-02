@@ -31,15 +31,32 @@ export function Hero() {
             </p>
           </div>
 
-          <div className="hidden md:block">
-            <Image
-              src="/headshot-david.png"
-              alt="David Fuesser"
-              width={200}
-              height={200}
-              className="rounded-xl grayscale hover:grayscale-0 transition-all duration-500"
-              priority
-            />
+          <div className="hidden md:flex items-center gap-4">
+            <div className="text-center">
+              <div className="relative w-40 h-40 rounded-xl overflow-hidden">
+                <Image
+                  src="/headshot-david.png"
+                  alt="David Fuesser"
+                  fill
+                  className="object-cover object-top grayscale hover:grayscale-0 transition-all duration-500"
+                  sizes="160px"
+                  priority
+                />
+              </div>
+              <p className="text-xs text-gray-400 mt-2 font-medium">David</p>
+            </div>
+            <div className="text-center">
+              <div className="relative w-40 h-40 rounded-xl overflow-hidden">
+                <Image
+                  src="/headshot-lucas.png"
+                  alt="Lucas"
+                  fill
+                  className="object-cover object-top grayscale hover:grayscale-0 transition-all duration-500"
+                  sizes="160px"
+                />
+              </div>
+              <p className="text-xs text-gray-400 mt-2 font-medium">Lucas</p>
+            </div>
           </div>
         </div>
       </div>

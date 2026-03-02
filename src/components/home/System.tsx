@@ -1,4 +1,5 @@
 import { Bot } from 'lucide-react';
+import Image from 'next/image';
 
 const productItems = [
   'Structured decisions that don\u2019t need a meeting to explain',
@@ -240,24 +241,40 @@ export function System() {
 
           <div className="grid md:grid-cols-2 gap-12 md:gap-16">
             <div>
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-8 h-px bg-[#D4A84B]/40" />
+              <div className="flex items-center gap-4 mb-4">
+                <div className="relative w-12 h-12 rounded-lg overflow-hidden shrink-0">
+                  <Image
+                    src="/headshot-david.png"
+                    alt="David Fuesser"
+                    fill
+                    className="object-cover object-top grayscale"
+                    sizes="48px"
+                  />
+                </div>
                 <h3 className="text-lg font-bold text-white">
                   David — Product Intent
                 </h3>
               </div>
-              <p className="text-sm text-zinc-400 leading-relaxed pl-11">
+              <p className="text-sm text-zinc-400 leading-relaxed">
                 10 years inside product orgs. 30+ SaaS products. Knows where decisions get lost and how to make them flow. Designs the decision frameworks and priority structures that make your product intent actionable — not just for humans in meetings, but for agents in workflows.
               </p>
             </div>
             <div>
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-8 h-px bg-[#D4A84B]/40" />
+              <div className="flex items-center gap-4 mb-4">
+                <div className="relative w-12 h-12 rounded-lg overflow-hidden shrink-0">
+                  <Image
+                    src="/headshot-lucas.png"
+                    alt="Lucas"
+                    fill
+                    className="object-cover object-top grayscale"
+                    sizes="48px"
+                  />
+                </div>
                 <h3 className="text-lg font-bold text-white">
                   Lucas — Engineering Quality
                 </h3>
               </div>
-              <p className="text-sm text-zinc-400 leading-relaxed pl-11">
+              <p className="text-sm text-zinc-400 leading-relaxed">
                 Built the engineering quality foundation of a startup from Seed to $200M. Cut critical bugs by 80% through tighter automation and smarter pipelines. Builds the safety net from the other end — quality gates agents cannot bypass, automated checks that prove output matches intent.
               </p>
             </div>
