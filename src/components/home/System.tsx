@@ -248,7 +248,7 @@ export function System() {
                     alt="David Fuesser"
                     fill
                     className="object-cover object-top grayscale"
-                    sizes="48px"
+                    sizes="256px"
                   />
                 </div>
                 <h3 className="text-lg font-bold text-white">
@@ -267,7 +267,7 @@ export function System() {
                     alt="Lucas"
                     fill
                     className="object-cover object-top grayscale"
-                    sizes="48px"
+                    sizes="256px"
                   />
                 </div>
                 <h3 className="text-lg font-bold text-white">
