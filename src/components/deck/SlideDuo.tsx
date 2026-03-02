@@ -42,7 +42,7 @@ export function SlideDuo() {
               className="border border-white/10 rounded-xl p-6 bg-white/[0.03]"
             >
               <div className="flex items-center gap-4 mb-5">
-                <div className="relative w-14 h-14 rounded-lg overflow-hidden shrink-0">
+                <div className="relative w-20 h-20 rounded-xl overflow-hidden shrink-0">
                   <Image
                     src={person.photo}
                     alt={person.name}
