@@ -6,8 +6,8 @@ const people = [
     role: 'Product Architect',
     photo: '/headshot-david.png',
     bullets: [
-      '10+ years in product, 4 continents, 30+ teams',
-      'Founded KADACON (product management conference)',
+      'Product lead in 3 high-growth startups (YC-backed, Series A/B, bootstrapped)',
+      'Founded KADACON — product consulting for Mercedes-Benz, Fastic, Quora, Dr. Sam',
       'Designs the system: intent architecture, workflows, alignment',
     ],
   },
