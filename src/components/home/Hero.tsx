@@ -39,7 +39,7 @@ export function Hero() {
                   alt="David Fuesser"
                   fill
                   className="object-cover object-top grayscale hover:grayscale-0 transition-all duration-500"
-                  sizes="160px"
+                  sizes="480px"
                   priority
                 />
               </div>
@@ -52,7 +52,7 @@ export function Hero() {
                   alt="Lucas"
                   fill
                   className="object-cover object-top grayscale hover:grayscale-0 transition-all duration-500"
-                  sizes="160px"
+                  sizes="480px"
                 />
               </div>
               <p className="text-xs text-gray-400 mt-2 font-medium">Lucas</p>
