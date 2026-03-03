@@ -9,9 +9,9 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "fathom-client": "^3.7.2",
     "lucide-react": "^0.556.0",
     "next": "16.0.7",
-    "posthog-js": "^1.356.1",
     "react": "19.2.0",
     "react-dom": "19.2.0"
   },
