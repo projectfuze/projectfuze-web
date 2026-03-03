@@ -6,9 +6,9 @@ const people = [
     role: 'Product Architect',
     photo: '/headshot-david.png',
     bullets: [
-      'Product Lead in 3 High-Growth-Startups (YC-backed, Series A/B, Bootstrapped)',
-      'Gründer von KADACON — Product Consulting für Mercedes-Benz, Fastic, Quora, Dr. Sam',
-      'Designt das System: Intent-Architektur, Workflows, Alignment',
+      'Product Lead in drei High-Growth-Startups — weiß, wo Entscheidungen verloren gehen',
+      'Gründer einer Product-Consulting-Firma (Mercedes-Benz, Quora, 30+ Orgs)',
+      'Designt Decision Frameworks und Priority-Strukturen, auf die Agents handeln können',
     ],
   },
   {
@@ -16,9 +16,9 @@ const people = [
     role: 'Engineering Lead',
     photo: '/headshot-lucas.png',
     bullets: [
-      'Senior Engineering Leader',
-      'Baut den Quality Layer: automatisierte Checks, Sicherheitsnetze',
-      'Deployed auf deinem Stack, trainiert dein Team, es zu betreiben',
+      'Engineering-Quality-Fundament eines Startups von Seed auf $200M aufgebaut',
+      'Kritische Bugs um 80% reduziert durch bessere Automation und smartere Pipelines',
+      'Quality Gates, die Agents nicht umgehen können — automatisierte Checks, die Output zu Intent beweisen',
     ],
   },
 ];

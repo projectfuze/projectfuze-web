@@ -26,7 +26,7 @@ export function Hero() {
               Check Your AI Readiness
             </a>
             <p className="mt-4 text-xs font-mono text-gray-400 tracking-wide">
-              <span className="inline-block w-1.5 h-1.5 rounded-full bg-green-500 mr-2 align-middle" />
+              <span className="relative inline-flex w-1.5 h-1.5 mr-2 align-middle"><span className="absolute inset-0 rounded-full bg-green-400 animate-ping" style={{ animationDuration: '2s' }} /><span className="relative w-1.5 h-1.5 rounded-full bg-green-500" /></span>
               Accepting 2 new engagements in {new Date().toLocaleString('en-US', { month: 'long' })}
             </p>
           </div>

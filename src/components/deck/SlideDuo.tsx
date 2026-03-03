@@ -6,9 +6,9 @@ const people = [
     role: 'Product Architect',
     photo: '/headshot-david.png',
     bullets: [
-      'Product lead in 3 high-growth startups (YC-backed, Series A/B, bootstrapped)',
-      'Founded KADACON — product consulting for Mercedes-Benz, Fastic, Quora, Dr. Sam',
-      'Designs the system: intent architecture, workflows, alignment',
+      'Product lead in three high-growth startups — knows where decisions get lost',
+      'Founded a product consulting firm (Mercedes-Benz, Quora, 30+ orgs)',
+      'Designs decision frameworks and priority structures that agents can act on',
     ],
   },
   {
@@ -16,9 +16,9 @@ const people = [
     role: 'Engineering Lead',
     photo: '/headshot-lucas.png',
     bullets: [
-      'Senior engineering leader',
-      'Builds the quality layer: automated checks, safety nets',
-      'Deploys on your stack, trains your team to run it',
+      'Built engineering quality foundation of a startup from Seed to $200M',
+      'Cut critical bugs by 80% through tighter automation and smarter pipelines',
+      'Quality gates agents cannot bypass, automated checks that prove output matches intent',
     ],
   },
 ];
