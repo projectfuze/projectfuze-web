@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-ProjectFuze website - a single-page operator site for David Fuesser's fractional product operations practice. Targeting Series A/B SaaS founders (10-50 people). Positioned as "Fractional Product Operator" — hands-on, embedded, proof-led.
+ProjectFuze website — a duo service by David Fuesser (product architect) and Lucas (engineering lead). They install AI-native backbones for Series A/B SaaS companies (10–50 people). David handles product intent (decision frameworks, workflows, alignment). Lucas handles engineering quality (quality gates, automated checks, CI/CD safety nets). Together they "bookend" the product-to-engineering pipeline with AI agents building in between.
 
 ## Tech Stack
 
@@ -25,21 +25,32 @@ npm run lint     # Run ESLint
 ```
 src/
 ├── app/                    # Next.js App Router pages
-│   ├── page.tsx           # Homepage (single-page pitch, 8 sections)
+│   ├── page.tsx           # Homepage (7 sections)
+│   ├── deck/              # Pitch deck (slide-based)
 │   ├── infuzed/           # Newsletter signup page
 │   ├── privacy/           # Privacy policy
 │   ├── impressum/         # Legal notice (German requirement)
 │   └── snake/             # Easter egg
 ├── components/
 │   ├── home/              # Homepage sections
-│   │   ├── Hero.tsx       # Title + headshot + CTAs
-│   │   ├── Problem.tsx    # 01 — The Pattern (founder's internal monologue)
-│   │   ├── Proof.tsx      # 02 — What I Find (anonymized findings with numbers)
-│   │   ├── WhoIAm.tsx     # 03 — Who I Am (photo + bio + credibility)
-│   │   ├── HowIWork.tsx   # 04 — How I Work (Embed. Diagnose. Build.)
-│   │   ├── Engagements.tsx # 05 — Three-tier offer stack
-│   │   ├── FitCheck.tsx   # 06 — Good fit / Not a fit
+│   │   ├── Hero.tsx       # Headline + duo headshots + CTA
+│   │   ├── Shift.tsx      # 01 — The Shift (tools → teamwork, before/after)
+│   │   ├── System.tsx     # 02 — The System (bookends visual + duo bios)
+│   │   ├── HowIWork.tsx   # 03 — How We Work (Scan. Build. Hand off.)
+│   │   ├── Engagements.tsx # 04 — The Engagement (3-tier offer stack)
+│   │   ├── FitCheck.tsx   # 05 — Fit Check
 │   │   └── FinalCTA.tsx   # Book a Call close
+│   ├── deck/              # Pitch deck slides
+│   │   ├── Deck.tsx       # Deck container + navigation
+│   │   ├── SlideTitle.tsx
+│   │   ├── SlideProblem.tsx
+│   │   ├── SlideShift.tsx
+│   │   ├── SlideSystem.tsx
+│   │   ├── SlideDuo.tsx
+│   │   ├── SlideHowWeWork.tsx
+│   │   ├── SlideTimeSavings.tsx
+│   │   ├── SlideNextStep.tsx
+│   │   └── ProgressBar.tsx
 │   ├── layout/            # Navbar, Footer
 │   └── ui/                # Reusable components (Button, Section)
 ```
@@ -48,6 +59,7 @@ src/
 
 - **Primary dark**: `#3D3D3D`
 - **Accent gold**: `#D4A84B`
+- **Dark sections**: `#09090b` (System section, deck)
 - **Logo**: "PROJECT" in dark/white + "FUZE" in gold
 - **Font**: Plus Jakarta Sans
 - **Section numbers**: Mono font, gold accent, uppercase tracking
@@ -56,9 +68,9 @@ src/
 
 | Tier | Name | Price | Duration |
 |------|------|-------|----------|
-| 1 | Product Health Scan | $5,000 | 2 weeks |
-| 2 | Embedded Diagnostic | $15,000–$20,000 | 4 weeks |
-| 3 | Operating System Build | $10,000/month | 3–6 months |
+| Entry | AI-Readiness Scan | $4,000 | 2 weeks |
+| Build A | The Architect (David solo) | $15,000/month | 2 months |
+| Build B | David + Lucas (Turnkey) | $25,000/month | 2 months |
 
 ## Key Patterns
 
@@ -67,18 +79,19 @@ The navbar adapts colors based on page hero background:
 - Dark hero pages: `/infuzed`
 - Light hero pages: `/`, `/privacy`, `/impressum`
 
-### Calendly Integration
-All "Book a Call" CTAs link to: `https://calendly.com/davidfuesser/30min`
+### CTA Links
+All "Book a Call" / "Check Your AI Readiness" CTAs link to: `https://cal.com/davidfuesser/ai-readiness-call`
 
 ## Current State
 
-- Single-page homepage with 8 sections
+- MVP — homepage (7 sections) + pitch deck, both reflecting duo positioning
 - Email forms are static (no backend integration yet)
 - Newsletter service TBD (Beehiiv, ConvertKit, etc.)
 
 ## Positioning
 
-- **Title**: Fractional Product Operator
-- **Tagline**: "I don't bring decks. I bring clarity."
+- **Framing**: "Your team has AI tools. They don't have an AI-native workflow."
+- **Core pitch**: We install the backbone that connects Product, Design, and Engineering into a single AI-native workflow. We build it, hand it off, and the system stays.
 - **Voice**: Intellectually precise, counter-intuitive, pattern-based, direct but not aggressive
-- **Target**: Series A/B SaaS founders scaling from founder-led to product-led
+- **Target**: Series A/B SaaS founders, 10–50 people
+- **Shared backstory**: David and Lucas have been on opposite sides of the same scaling startups — twice. Once at a platform SaaS (Seed to $200M), now at an AI tool going through the same transition.
